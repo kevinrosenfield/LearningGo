@@ -1,0 +1,1 @@
+This is going to be a bit disorganized. Just throwing a bunch of code in here as I learn Go. Most complete and well-commented file is trying-structs/shapes/main.go, where I practice using interfaces and sturcts to implement them.
