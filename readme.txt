@@ -1,0 +1,1 @@
+go mod edit -replace example.com/modulename=../modulename
