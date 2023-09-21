@@ -11,38 +11,38 @@ type Shape interface {
 }
 
 // define an unexported recangle struct with necessary attributes to calculate area
-type Rectangle struct {
+type rectangle struct {
 	Height float64
 	Width  float64
 }
 
 // make exported constructor function for Rectangle
-func MakeRectangle(height float64, width float64) *Rectangle {
-	return &Rectangle{
+func MakeRectangle(height float64, width float64) *rectangle {
+	return &rectangle{
 		Height: height,
 		Width:  width,
 	}
 }
 
 // add the GetArea function to satisfy the implementation requirements of the Shape interface
-func (r Rectangle) GetArea() float64 {
+func (r rectangle) GetArea() float64 {
 	return r.Height * r.Width
 }
 
 // define an unexported circle struct with necessary attributes to calculate area
-type Circle struct {
+type circle struct {
 	Radius float64
 }
 
 // make exported constructor function for Circle
-func MakeCircle(radius float64) *Circle {
-	return &Circle{
+func MakeCircle(radius float64) *circle {
+	return &circle{
 		Radius: radius,
 	}
 }
 
 // add the GetArea function to satisfy the implementation requirements of the Shape interface
-func (c Circle) GetArea() float64 {
+func (c circle) GetArea() float64 {
 	return math.Pi * math.Pow(c.Radius, 2)
 }
 
