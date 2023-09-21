@@ -4,18 +4,18 @@ import "fmt"
 
 // interface to Person
 type Person interface {
-	ageTimesHeight() (int)
+	ageTimesHeight() int
 }
 
 type person struct {
 	heightInches int
-	ageYears int
+	ageYears     int
 }
 
 func NewPerson(heightInches int, ageYears int) Person {
 	return &person{
 		heightInches: heightInches,
-		ageYears: ageYears,
+		ageYears:     ageYears,
 	}
 }
 
@@ -32,6 +32,6 @@ func main() {
 	default:
 		fmt.Println("Not a Person Interface")
 	}
-	
+
 	fmt.Println(NewPerson(62, 71).ageTimesHeight())
 }
